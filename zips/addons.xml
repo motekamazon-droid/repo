@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addons>
+    <addon id="service.sabri-maranan-subtitles" name="Sabri Maranan Subtitles" version="1.0.0" provider-name="motekamazon-droid">
+        <requires>
+            <import addon="xbmc.python" version="3.0.0"/>
+        </requires>
+        <extension point="xbmc.service" library="service.py"/>
+        <extension point="xbmc.addon.metadata">
+            <summary>Auto-fetch English subtitles for Sabri Maranan from GitHub</summary>
+            <description>Automatically downloads and applies English subtitles for Sabri Maranan episodes from a public GitHub repository. When you play a Sabri Maranan episode, the addon will extract the episode number and fetch the matching subtitle file from GitHub.</description>
+            <disclaimer>This addon requires internet access to fetch subtitles from GitHub.</disclaimer>
+            <language></language>
+            <platform>all</platform>
+            <license>GPL-2.0</license>
+            <website>https://github.com/motekamazon-droid/sabri-maranan-subtitles</website>
+            <source>https://github.com/motekamazon-droid/sabri-maranan-subtitles</source>
+            <assets>
+            </assets>
+        </extension>
+    </addon>
+</addons>
