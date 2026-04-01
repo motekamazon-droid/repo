@@ -2,6 +2,15 @@
 
 English subtitles for the Israeli comedy series "Sabri Maranan" (סברי מרנן).
 
+## 🎬 **Kodi Addon Installation**
+
+**Short URL for easy remote entry:**
+```
+bit.ly/sabri-addon
+```
+
+Add this repository in Kodi and install the addon — subtitles auto-load when you play episodes!
+
 ## Installation
 
 ### For Kodi Users
