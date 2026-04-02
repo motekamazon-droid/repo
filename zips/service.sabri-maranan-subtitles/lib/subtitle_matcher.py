@@ -35,6 +35,7 @@ class SubtitleMatcher:
         - s01e12, S01E12
         - Season 1 Episode 12
         - sabri_maranan_s1e12_...
+        - פרק 1 (Hebrew: "Episode 1")
 
         Args:
             filename: Video filename or path
@@ -43,20 +44,27 @@ class SubtitleMatcher:
             Episode number (int), or None if not found
         """
         # Get just the filename without path
-        basename = os.path.basename(filename).lower()
+        basename = os.path.basename(filename)
+        basename_lower = basename.lower()
 
         # Pattern 1: s1e12 or s01e12
-        match = re.search(r's0?1e(\d{1,2})', basename)
+        match = re.search(r's0?1e(\d{1,2})', basename_lower)
         if match:
             return int(match.group(1))
 
         # Pattern 2: episode 12, ep12, e12
-        match = re.search(r'ep(?:isode)?\s*(\d{1,2})', basename)
+        match = re.search(r'ep(?:isode)?\s*(\d{1,2})', basename_lower)
         if match:
             return int(match.group(1))
 
         # Pattern 3: season 1 episode 12
-        match = re.search(r'season\s+1.*episode\s+(\d{1,2})', basename)
+        match = re.search(r'season\s+1.*episode\s+(\d{1,2})', basename_lower)
+        if match:
+            return int(match.group(1))
+
+        # Pattern 4: Hebrew "פרק X" (episode X)
+        # Matches Hebrew character פרק followed by whitespace and digits
+        match = re.search(r'פרק\s*(\d{1,2})', basename)
         if match:
             return int(match.group(1))
 
@@ -81,5 +89,16 @@ class SubtitleMatcher:
 
     def is_sabri_maranan(self, filename):
         """Check if filename appears to be a Sabri Maranan episode"""
-        basename = os.path.basename(filename).lower()
-        return 'sabri' in basename or 'maranan' in basename
+        basename = os.path.basename(filename)
+        basename_lower = basename.lower()
+
+        # Check for English names
+        if 'sabri' in basename_lower or 'maranan' in basename_lower:
+            return True
+
+        # Check for Hebrew episodes (פרק = episode in Hebrew)
+        # Filename pattern: פרק X * DATE - TITLE
+        if 'פרק' in basename and re.search(r'פרק\s*(\d{1,2})', basename):
+            return True
+
+        return False
