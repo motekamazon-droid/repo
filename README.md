@@ -4,10 +4,12 @@ English subtitles for the Israeli comedy series "Sabri Maranan" (סברי מרנ
 
 ## 🎬 **Kodi Addon Installation**
 
-**Short URL for easy remote entry:**
+**Repository URL for easy setup:**
 ```
-bit.ly/sabri-addon
+https://motekamazon-droid.github.io/repo/
 ```
+
+Short URL: `bit.ly/sabri-addon`
 
 Add this repository in Kodi and install the addon — subtitles auto-load when you play episodes!
 
@@ -15,9 +17,11 @@ Add this repository in Kodi and install the addon — subtitles auto-load when y
 
 ### For Kodi Users
 
-1. Download and install the Kodi addon: `service.sabri-maranan-subtitles`
-2. Enable the addon in Kodi Settings → Add-ons → Services
-3. Play any Sabri Maranan episode - subtitles will auto-load
+1. In Kodi: **Add-ons** → **Install from repository**
+2. Enter repository URL: `https://motekamazon-droid.github.io/repo/`
+3. Browse to **Sabri Maranan Subtitles** and install
+4. Enable in **Settings** → **Add-ons** → **Services**
+5. Play any episode - subtitles auto-load!
 
 ### Manual Subtitle Downloads
 
@@ -26,9 +30,9 @@ Subtitles are organized by season and episode:
 
 ## Progress
 
-- **15/42** episodes completed with English subtitles
-- New episodes processed and added automatically
+- **17/42** episodes completed with English subtitles (as of April 2, 2026)
+- New episodes processed and added automatically via daily automation
 
 ## Updates
 
-Last updated: April 1, 2026
+Last updated: April 2, 2026

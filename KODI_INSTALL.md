@@ -7,7 +7,7 @@
 1. Open **Kodi Settings** → **Add-ons** → **Install from repository**
 2. Add new repository with this URL:
    ```
-   https://raw.githubusercontent.com/motekamazon-droid/repo/main/
+   https://motekamazon-droid.github.io/repo/
    ```
    (Shortened: `bit.ly/sabri-addon`)
 3. Browse to **Sabri Maranan Subtitles** and install
@@ -24,7 +24,7 @@
 
 ## Supported Episodes
 
-Currently: **Episodes 1-15**
+Currently: **Episodes 1-17** (as of April 2, 2026)
 Updates automatically as new episodes are processed
 
 ## Filename Requirements
@@ -39,15 +39,17 @@ Works with these patterns:
 
 - **No subtitles loading?** Check Kodi logs (Settings → System → Logging)
 - **Connection issues?** Verify internet connection
-- **Episode not found?** Check if it's in the GitHub repo (episodes 1-15 available)
+- **Episode not found?** Check if it's in the GitHub repo (episodes 1-17 available)
+- **Can't find addon in repository?** Make sure the repository URL is entered correctly in step 2
 
 ## Repository URL
 
 **For manual install (if needed):**
 ```
-https://raw.githubusercontent.com/motekamazon-droid/repo/main/
+https://motekamazon-droid.github.io/repo/
 ```
 
 ---
 
 **Repository**: https://github.com/motekamazon-droid/repo
+**GitHub Pages**: https://motekamazon-droid.github.io/repo/
